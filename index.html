@@ -273,12 +273,12 @@ language corpora.
           <!-- <br> -->
           </div>
           <p>
-            Our overview of our MINDAGENT architecture. Gaming Environment: It emits related game
-information. State Extraction: This module converts relevant game data into a structured text format so
-the LLMs can process it. Dispatcher: The main workhorse of our infrastructure makes decisions. Memory
-History: A storage utility that stores relevant information. Action Extraction, extract actions from text inputs
-and convert them into domain-specific language. Action Validation: Validate actions so they don't cause errors
-when executing.
+            Our overview of our MindAgent architecture. 
+            <b>Planning Skill and Tool Use</b>: The game environment requires diverse planning skills and tool use to complete tasks. 
+            It emits related game information. This module also converts relevant game data into a structured text format so the LLMs can process it. 
+            <b> LLM </b>: The main workhorse of our infrastructure makes decisions, which is a dispatcher for the multi-agent system. 
+            <b> Memory History </b>: A storage utility that stores relevant information. 
+            <b> Action Module </b>, extract actions from text inputs and convert them into domain-specific language. Validate DSLs so they don't cause errors when executing.
           </p>
           <img src="assets/MindAgent_model.png" style="margin-top: rem;"/>
           <br/>
