@@ -1,11 +1,299 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello, World!</title>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MindAgent: Emerging Gaming Interaction">
+  <meta name="keywords" content="MindAgent: Emerging Gaming Interaction">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MindAgent</title>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+.btn {
+  background-color: Gray;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.is-rounded {border-radius: 12px;}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: Silver;
+}
+
+a {
+	color: inherit;
+    text-decoration: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.publication-video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+
+  overflow: hidden;
+  border-radius: 10px !important;
+}
+
+.publication-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+<link rel="stylesheet" href="static/css/index.css">
+<script src="https://kit.fontawesome.com/b25d0fd750.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+function UpdateTaskIllustration() {
+  var task = document.getElementById("illu-task").value;
+  console.log("illu", task)
+  var img = document.getElementById("task-illustration");
+  img.src = "assets/" + "illu-" + task + ".png"
+}
+
+function UpdateTaskDemonstration() {
+  var task = document.getElementById("demo-task").value;
+  console.log("demo", task)
+  var video = document.getElementById("task-demonstration");
+  video.src = "assets/" + "demo-" + task + ".mp4"
+  video.playbackRate = 1.75;
+  video.play();
+}
+</script>
+
 </head>
-<body>
-    <h1>Hello, World!</h1>
+
+<body onload="UpdateTaskIllustration(); UpdateTaskDemonstration();">
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ARNOLD: A Benchmark for Language-Grounded Task Learning With Continuous States in Realistic 3D Scenes</h1>
+          <h3 class="title is-4 conference-authors"><a target="_blank" href="https://iccv2023.thecvf.com/">ICCV 2023</a></h3>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a target="_blank" href="https://nikepupu.github.io/">Ran Gong</a><sup>1✶&#8224;</sup>,</span>
+            <span class="author-block">
+              <a target="_blank" href="https://www.microsoft.com/en-us/research/people/qihua/">Qiuyuan Huang</a><sup>2✶&#8225;</sup>,</span>
+            <span class="author-block">
+              <a target="_blank" href="https://jeasinema.github.io/">Xiaojian Ma</a><sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://www.linkedin.com/in/hoi-vo-193420">Hoi Vo</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://www.linkedin.com/in/zane-durante/">Zane Durante</a><sup>4&#8224;</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://zilongzheng.github.io/">Zilong Zheng</a><sup>5</sup>,
+            </span>
+            <br/>
+            <span class="author-block">
+              <a target="_blank" href="http://www.stat.ucla.edu/~sczhu/">Song-Chun Zhu</a><sup>1567</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://web.cs.ucla.edu/~dt/">Demetri Terzopoulos</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://profiles.stanford.edu/fei-fei-li">Li Fei-Fei </a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://www.microsoft.com/en-us/research/people/jfgao/">Jianfeng Gao</a><sup>2</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of California, Los Angeles,</span>
+            <span class="author-block"><sup>2</sup>Microsoft Research, Redmond,</span>
+            <span class="author-block"><sup>3</sup>Xbox Team, Microsoft</span>
+            <br/>
+            <span class="author-block"><sup>4</sup>Stanford University,</span>
+            <span class="author-block"><sup>5</sup>BIGAI</span>
+            <span class="author-block"><sup>6</sup>Peking University</span>
+            <span class="author-block"><sup>7</sup>Tsinghua University</span>
+          </div>
+
+          <p style="font-size: 0.9em; padding: 0.5em 0 0 0;">✶ indicates equal contribution</p>
+
+          <p style="font-size: 0.9em; padding: 0.5em 0 0 0;"> &#8224; indicates work done during internship at Microsoft Research, Redmond </p>
+        
+          <p style="font-size: 0.9em; padding: 0.5em 0 0 0;"> &#8225; project leader </p>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+            <!-- Arxiv Link. -->
+            <span class="link-block">
+              <a target="_blank" href="https://arxiv.org/abs/2309.09971"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
+
+            <!-- Code Link. -->
+            <span class="link-block">
+              <a target="_blank" href="https://github.com/mindagent/mindagent"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code (Coming Soon)</span>
+              </a>
+            </span>
+
+            <!-- Docs Link. -->
+            <!-- <span class="link-block">
+              <a target="_blank" href="https://arnold-docs.readthedocs.io/en/latest/"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-book"></i>
+                </span>
+                <span>Docs</span>
+              </a>
+            </span> -->
+
+            <!-- Data Link. -->
+            <!-- <span class="link-block">
+              <a target="_blank" href="https://drive.google.com/drive/folders/1yaEItqU9_MdFVQmkKA6qSvfXy_cPnKGA?usp=sharing"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fa fa-database"></i>
+                </span>
+                <span>Data</span>
+              </a>
+            </span> -->
+
+            <!-- Video Link. -->
+            <!-- <span class="link-block">
+              <a target="_blank" href="https://youtu.be/w-Cp1PRDWzI"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                </span>
+                <span>Video</span>
+              </a>
+            </span> -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser" style="margin-top: -2rem;">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <div class="container">
+        <div class="has-text-centered" style="padding: 0 1em;">
+          <img src="assets/framework.png"/>
+          <p style="text-align: justify; font-size: 0.8em;">We present <tt>MindAgent </tt>, an infrastructure for emergent gaming interaction. It enables <span style="color: #2176FF;"><b>multi NPC collaboration</b></span> and <span style="color: #1AA260;"><b>human NPC collaboration</b></span>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="margin-top: -4rem;">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Large Language Models (LLMs) have the capacity of performing complex scheduling in a multi-agent system and can coordinate these agents into completing sophisticated tasks that require extensive collaboration. However, despite
+the introduction of numerous gaming frameworks, the community has insufficient benchmarks towards building general multi-agents collaboration infrastructure that encompass both LLM and human-NPCs collaborations. In this work, we
+propose a novel infrastructure - MindAgent - to evaluate planning and coordination emergent capabilities for gaming interaction. In particular, our infrastructure
+leverages existing gaming framework, to i) require understanding of the coordinator for a multi-agent system, ii) collaborate with human players via un-finetuned
+proper instructions, and iii) establish an in-context learning on few-shot prompt
+with feedback. Furthermore, we introduce CUISINEWORLD, a new gaming scenario and related benchmark that dispatch a multi-agent collaboration efficiency
+and supervise multiple agents playing the game simultaneously. We conduct comprehensive evaluations with new auto-metric collaboration score CoS for calculating the collaboration efficiency. Finally, our infrastructure can be deployed into
+real-world gaming scenarios in a customized VR version of CUISINEWORLD and
+adapted in existing broader “Minecraft” gaming domain. We hope our findings on
+LLMs and the new infrastructure for general-purpose scheduling and coordination can help shed light on how such skills can be obtained by learning from large
+language corpora.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <!--/ Abstract. -->
+
+  </div>
+
+  <!-- Paper video. -->
+  <div class="columns is-centered has-text-centered" style="margin-top: -3rem;">
+    <div class="column is-two-thirds">
+      <h2 class="title is-3">Video</h2>
+      <div class="publication-video">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/LBD3dmlinG4" title="minecraft vr demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+<section class="section">
+    <div class="container is-max-widescreen">
+  
+      <div class="rows">
+  
+      <!-- Animation. -->
+      <div class="rows is-centered ">
+        <div class="row is-full-width">
+          <!-- Interpolating. -->
+          <h3 class="title is-4">Infrastructure</h3>
+          <div class="content has-text-justified">
+          <!-- <br> -->
+          </div>
+          <p>
+            Our overview of our MINDAGENT architecture. Gaming Environment: It emits related game
+information. State Extraction: This module converts relevant game data into a structured text format so
+the LLMs can process it. Dispatcher: The main workhorse of our infrastructure makes decisions. Memory
+History: A storage utility that stores relevant information. Action Extraction, extract actions from text inputs
+and convert them into domain-specific language. Action Validation: Validate actions so they don't cause errors
+when executing.
+          </p>
+          <img src="assets/MindAgent_model.png" style="margin-top: rem;"/>
+          <br/>
+          <br/>
+  
+        
+  
+         
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
 </body>
 </html>
